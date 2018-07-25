@@ -72,7 +72,8 @@ class App extends Component {
           </div>
           <div className="container">
             <LeftPanel 
-              messages={ this.state.messages } 
+              messages={ this.state.messages }
+              currentMessage={this.state.currentMessage}
               selectMessage={ (currentMessage) => this.selectMessage(currentMessage) } 
               removeMessage={ (id) => this.removeMessage(id) }
               timeConvert={(code) => this.timeConvert(code)}
