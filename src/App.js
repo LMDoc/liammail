@@ -35,10 +35,8 @@ class App extends Component {
   }
 
   removeMessage(id) {
-    let newArr = this.state.messages.slice();
-    let index = newArr.indexOf(id);
-    newArr.splice(index, 1);
-    this.setState({ messages: newArr })
+    let newArr = this.state.messages.filter(i => i.uid !== id);
+    this.setState({ messages: newArr, currentMessage: newArr[0] || 'empty'})
   }
 
   sortMessagesAs() {

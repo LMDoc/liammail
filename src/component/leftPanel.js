@@ -11,7 +11,7 @@ class LeftPanel extends Component {
 				<MessagesList 
 					messages={this.props.messages} 
 					selectMessage={ (currentMessage) => this.props.selectMessage(currentMessage) }
-					removeMessage={ (id) => this.props.removeMessage(id) }
+					removeMessage={ this.props.removeMessage }
 					timeConvert={(code) => this.props.timeConvert(code)}
 					sortMessagesDes={() => this.props.sortMessagesDes()}
 					sortMessagesAs={() => this.props.sortMessagesAs()}

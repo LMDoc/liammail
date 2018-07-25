@@ -7,6 +7,7 @@ class Message extends Component {
 		this.state = {
 			clicked: false,
 		}
+
 	}
 
 
@@ -19,8 +20,9 @@ class Message extends Component {
 		this.props.selectMessage(this.props.mail);
 	}
 
-	handleRemove(id) {
-		this.props.removeMessage(id);
+	handleRemove(e) {
+		e.stopPropagation();
+		this.props.removeMessage(this.props.mail.uid);
 	}
 
 	render() {
@@ -35,7 +37,7 @@ class Message extends Component {
 					<p>{sender}</p>
 					<p>{subject}</p>
 					<p>{time}</p>
-					<p className="close" onClick={ (id) => this.handleRemove(id) }>X</p>
+					<p className="close" onClick={ (e) => this.handleRemove(e) }>X</p>
 				</li>
 			)
 	}

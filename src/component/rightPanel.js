@@ -2,10 +2,10 @@ import React, { Component } from "react";
 
 const rightPanel = props => {
 	
+		if(props.currentMessage !== null && props.messages.length > 0) {
 		const time = props.timeConvert(props.currentMessage.time_sent);
 		const subject = props.currentMessage.subject.slice(0, 1).toUpperCase() + props.currentMessage.subject.slice(1);
-
-		if(props.currentMessage !== null && props.messages.length > 0) {
+	
 			return(
 				<div className="rightPanel">
 					<div className="selected-container">
