@@ -40,15 +40,13 @@ class App extends Component {
   }
 
   sortMessagesAs() {
-    let newArr = this.state.messages.slice();
-    let sorted = newArr.sort((a, b) => a.time_sent < b.time_sent);
-    this.setState({ messages: newArr })
+    let sorted = [...this.state.messages].sort((a, b) => a.time_sent < b.time_sent);
+    this.setState({ messages: sorted })
   }
 
   sortMessagesDes() {
-    let newArr = this.state.messages.slice();
-    let sorted = newArr.sort((a, b) => a.time_sent > b.time_sent);
-    this.setState({ messages: newArr })
+    let sorted = [...this.state.messages].sort((a, b) => a.time_sent > b.time_sent);
+    this.setState({ messages: sorted })
   }
 
   timeConvert(code) {

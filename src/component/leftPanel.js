@@ -10,7 +10,7 @@ class LeftPanel extends Component {
 			<div className="leftPanel">
 				<MessagesList 
 					messages={this.props.messages} 
-					selectMessage={ (currentMessage) => this.props.selectMessage(currentMessage) }
+					selectMessage={ this.props.selectMessage }
 					removeMessage={ this.props.removeMessage }
 					timeConvert={(code) => this.props.timeConvert(code)}
 					sortMessagesDes={() => this.props.sortMessagesDes()}

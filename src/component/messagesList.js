@@ -17,7 +17,7 @@ class MessagesList extends Component {
 				<Message
 				mail = {mail}
 				key = {mail.uid}
-				selectMessage={ (currentMessage) => this.props.selectMessage(currentMessage) }
+				selectMessage={ this.props.selectMessage }
 				removeMessage={ this.props.removeMessage }
 				timeConvert={(code) => this.props.timeConvert(code)}
 				 />
