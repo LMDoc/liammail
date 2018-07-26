@@ -13,10 +13,9 @@ class App extends Component {
       messages: [],
       currentMessage: null,
     }
-
   }
 
-  async componentWillMount() {
+  async componentWillMount() { 
     await this.getMessages();
     this.sortMessagesAs();
     this.setState({currentMessage: this.state.messages[0]})
@@ -84,7 +83,7 @@ class App extends Component {
               currentMessage={this.state.currentMessage} 
               messages={ this.state.messages } 
               timeConvert={(code) => this.timeConvert(code)}
-              />
+            />
           </div>
           <div className="footer-text">
             <p>LIAMMAIL 2018</p>
@@ -103,7 +102,6 @@ class App extends Component {
           </div>
         </div>
       )
-
   }
 }
 

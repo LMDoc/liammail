@@ -9,13 +9,13 @@ class LeftPanel extends Component {
 		return(
 			<div className="leftPanel">
 				<MessagesList 
-					messages={this.props.messages}
-					currentMessage={this.props.currentMessage}
+					messages={ this.props.messages }
+					currentMessage={ this.props.currentMessage }
 					selectMessage={ this.props.selectMessage }
 					removeMessage={ this.props.removeMessage }
-					timeConvert={(code) => this.props.timeConvert(code)}
-					sortMessagesDes={() => this.props.sortMessagesDes()}
-					sortMessagesAs={() => this.props.sortMessagesAs()}
+					timeConvert={ this.props.timeConvert }
+					sortMessagesDes={ this.props.sortMessagesDes }
+					sortMessagesAs={ this.props.sortMessagesAs }
 				/>
 			</div>
 		)

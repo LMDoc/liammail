@@ -14,6 +14,8 @@
 }
 
 .header-bar {
+  display: flex;
+  align-items: center;
   width: 100%;
   background: #2b2f3d;
   color: #f7f7e2;
@@ -44,7 +46,7 @@
 
 /*LEFT PANEL*/
 .leftPanel {
-  background: rgba(255,255,255,.7);
+  background: rgba(255,255,255,.6);
   width: 50%;
   height: 100%;
   overflow-y: scroll;

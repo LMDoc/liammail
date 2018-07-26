@@ -20,7 +20,7 @@ class MessagesList extends Component {
 				selectMessage={ this.props.selectMessage }
 				currentMessage={this.props.currentMessage}
 				removeMessage={ this.props.removeMessage }
-				timeConvert={(code) => this.props.timeConvert(code)}
+				timeConvert={ this.props.timeConvert }
 				 />
 			);
 		});
@@ -50,7 +50,6 @@ class MessagesList extends Component {
 				{mailItems}
 			</ul>
 		)
-
 	}
 };
 

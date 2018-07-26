@@ -92,7 +92,6 @@ class Message extends Component {
 				</li>
 			)
 		}
-
 	}
 }
 
